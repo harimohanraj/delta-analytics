@@ -1,16 +1,14 @@
 import React from 'react';
-
 import axios from 'axios';
 
 import logo from './omf_logo.png';
 import VideoDetail from './VideoDetail';
 import SessionListView from './SessionListView';
 
-
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-
+import Paper from '@material-ui/core/Paper';
 
 import './App.css';
 
@@ -44,20 +42,34 @@ class App extends React.Component {
 
   	return (
 
-	    <div className = "Container"> 
+	    <div className="AppContainer"> 
 
-	      <AppBar position = "static">
-	        <Toolbar>
-	          <img src={logo} alt="logo" height="10%" width="10%"/>
-	        </Toolbar>
-	      </AppBar>
+			<AppBar position = "static">
+				<Toolbar>
+					<img src={logo} alt="logo" height="10%" width="10%"/>
+				</Toolbar>
+			</AppBar>
       	 
-	      <SessionListView 
-	      	request_url = {this.state.request_url}
-	      	sessions = {this.state.sessions}
-	      />
-	    </div>
 
+	    	<div className="ContentContainer">
+
+	      		<div className="SessionContainer">
+				    <SessionListView 
+				    	request_url = {this.state.request_url}
+				    	sessions = {this.state.sessions}
+				    />
+			    </div>
+
+			 	<div className="AnalyticsContainer">
+			 	 	<Paper elevation={1}>
+			 	 		<div>
+			 	 			<Typography> Graphs go here! </Typography> 
+			 	 		</div> 
+			 	 	</Paper>
+			 	</div>
+
+		    </div>
+		</div>
 	);
   }
 }

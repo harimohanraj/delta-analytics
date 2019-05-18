@@ -2,8 +2,32 @@
   text-align: center;
 }
 
-.SessionList {
+.AppContainer {
   background-color: #F0F0F7;
+}
+
+.ContentContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: left;
+  padding: 10px;
+}
+
+.AnalyticsContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.VideoDetail {
+  padding-right: 10px;
+}
+
+.SessionList {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,4 +37,22 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.SessionListItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.SessionListItemData {
+  display: flex;
+  flex-direction: row;
+}
+
+.SessionInfoTabs {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
 

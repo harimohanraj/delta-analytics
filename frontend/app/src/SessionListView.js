@@ -27,10 +27,16 @@ class SessionListView extends React.Component {
 	transformSessionsToListItems(sessions) {
 		if(sessions.length > 0) {
 			const listItems = sessions.map((session) => 
-				<ListItem>
-					<VideoDetail videoId = {session.video_id}/>
-					<SessionInfoTabs session = {session}/>
-				</ListItem>
+				<div>
+					<ListItem className='SessionListItem'>
+						<h3>{session.label}</h3>
+						<div className='SessionListItemData'>
+							<VideoDetail videoId = {session.video_id}/>
+							<SessionInfoTabs session = {session}/>
+						</div>
+					</ListItem>
+					<Divider />
+				</div>
 			);
 			return listItems;
 		} else {

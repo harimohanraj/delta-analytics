@@ -14,19 +14,17 @@ function VideoDetail(props) {
 	// props:
 	// ~ videoId 
 	return (
-		<div>
-			<div>
-				<Youtube
-					videoId = {props.videoId}
-					opts = {{
-						height: '180',
-						width: '320',
-						playerVars: {
-							autoplay: 0
-						}
-					}}
-				/>
-			</div>
+		<div className='VideoDetail'>
+			<Youtube
+				videoId = {props.videoId}
+				opts = {{
+					height: '180',
+					width: '320',
+					playerVars: {
+						autoplay: 0
+					}
+				}}
+			/>
 		</div>
 	);
 }
